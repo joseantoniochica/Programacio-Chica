@@ -9,5 +9,7 @@ Classe - 1r E..
 
 Modalitat - Artístic.
 
+
 Presentació:
+
 🚀 Aquí escric el que m'agrada, perquè farem moltes coses U.U 👍
