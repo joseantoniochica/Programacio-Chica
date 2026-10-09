@@ -7,4 +7,4 @@ Classe - 1r E..
 Modalitat - Artístic.
 
 Presentació:
-:rocket: Aquí escric el que m'agrada, perquè farem moltes coses U.U :+1: :thumbsup: 
+:rocket:🚀 Aquí escric el que m'agrada, perquè farem moltes coses U.U :+1: :thumbsup: 
