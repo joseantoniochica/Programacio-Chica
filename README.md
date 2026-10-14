@@ -2,9 +2,13 @@
 Projectes de l'assignatura de 1r de Batxillerat - El Calamot.
 
 Nom - Huan
-Cognoms - Kan
+
+Cognoms - Kan Dos
+
 Classe - 1r E..
+
 Modalitat - Artístic.
 
-Presentació:
+
+### Presentació:
 🚀 Aquí escric el que m'agrada, perquè farem moltes coses U.U 👍
