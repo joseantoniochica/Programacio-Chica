@@ -1,25 +1,31 @@
 print("")
 
 
+#No cal escriure un print abans d'un input
+'''
+print('Quin és el teu nom\n')
+nom=input('')
+'''
+nom=input('Quin és el teu nom?\n')
 
-print('Quin és')
-nom=input('el teu nom?\n')
-print('Hola',nom)
+print('Hola',nom,'\n')
 
+#Canvi instantani de variable
+'''
 num=1
-print(num)
+print(num,",",type(num))
 num=2.5
-print(num)
+print(num,",",type(num))
 num='ups'
-print(num)
+print(num,",",type(num))
+'''
 
+#Llegim l'any de neixement i l'assignem a un enter (int)
+year=int(input('Quin any vas nèixer?\n'))
 
-print('Escriu la teva edat')
-nom=input()
-print('Tienes 600 años')
+print('En 2027 tindràs',2027-year,'anys\n')
 
-print('hola mundo')
-
+print('HOLA MUNDO!')
 
 
 print("")
