@@ -1,1 +1,16 @@
+print("")
 
+#Dades
+n1=int(input('Escriu un número\n'))
+n2=int(input('Escriu un segon número\n'))
+
+print('\n\033[4mOPERACIONS MATEMÀTIQUES\033[0m\n')
+print('          Suma:',n1,'+',n2,'=',n1+n2, '\n')
+print('         Resta:',n1,'-',n2,'=',n1-n2,'\t',n2,'-',n1,'=',n2-n1,'\n')
+print(' Multiplicació:',n1,'·',n2,'=',n1*n2,'\n')
+print('       Divisió:',n1,'/',n2,'=',n1/n2,'\t',n2,'/',n1,'=',n2/n1,'\n')
+print('  Módul/Residu:',n1,'%',n2,'=',n1%n2,'\t',n2,'%',n1,'=',n2%n1,'\n')
+print('Divisió entera:',n1,'//',n2,'=',n1//n2,'\t',n2,'//',n1,'=',n2//n1,'\n')
+print('      Potència:',n1,'^',n2,'=',n1**n2,'\t',n2,'^',n1,'=',n2**n1,'\n')
+
+print("")
