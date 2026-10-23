@@ -24,6 +24,7 @@ else:
     print('La seva suma és més petita que 10')
 '''
 
+# Sense operador
 '''
 if (suma > 8):
     print('La seva suma és més gran que 8 o més petita que 4')
@@ -40,5 +41,6 @@ if (suma > 8 or suma < 4): {
 if (suma > 8 or suma < 4): {
     print('La seva suma és més gran que 12 i més petita que 18')
 }
+
 
 print("")
