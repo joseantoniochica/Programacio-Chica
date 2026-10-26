@@ -1,27 +1,27 @@
 print("")
 
 
-#No cal escriure un print abans d'un input
+# No cal escriure un print abans d'un input
 '''
 print('Quin és el teu nom\n')
-nom=input('')
+nom = input('')
 '''
-nom=input('Quin és el teu nom?\n')
+nom = input('Quin és el teu nom?\n')
 
 print('Hola',nom,'\n')
 
-#Canvi instantani de variable
+# Canvi instantani de variable
 '''
-num=1
+num = 1
 print(num,",",type(num))
-num=2.5
+num = 2.5
 print(num,",",type(num))
-num='ups'
+num = 'ups'
 print(num,",",type(num))
 '''
 
-#Llegim l'any de neixement i l'assignem a un enter (int)
-year=int(input('Quin any vas nèixer?\n'))
+# Llegim l'any de neixement i l'assignem a un enter (int)
+year = int(input('Quin any vas nèixer?\n'))
 
 print('En 2027 tindràs',2027-year,'anys\n')
 

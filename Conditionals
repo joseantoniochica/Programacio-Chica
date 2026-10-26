@@ -2,9 +2,9 @@ print("")
 
 
 # Números
-n1=int(input('Escriu un número\n'))
-n2=int(input('Escriu un segon número\n'))
-suma=n1+n2
+n1 = int(input('Escriu un número\n'))
+n2 = int(input('Escriu un segon número\n'))
+suma = n1+n2
 
 # Simplificació de l'if en una línia
 #if (n1+n2 > 10): print('La seva suma és més gran que 10')
@@ -26,20 +26,51 @@ else:
 
 # Sense operador
 '''
+if (suma < 4):
+    print('La seva suma és més petita que 4 o més gran que 8')
 if (suma > 8):
-    print('La seva suma és més gran que 8 o més petita que 4')
-if (suma <4):
-    print('La seva suma és més gran que 8 o més petita que 4')
+    print('La seva suma és més petita que 4 o més gran que 8')
 '''
 
 # Operador or (o)
-if (suma > 8 or suma < 4): {
-    print('La seva suma és més gran que 8 o més petita que 4')
+if (suma < 4 or suma > 8): {
+    print('La seva suma és més petita que 4 o més gran que 8')
 }
 
-# Operador or (o)
-if (suma > 8 or suma < 4): {
+# Operador and (i)
+if (suma > 12 and suma < 18): {
     print('La seva suma és més gran que 12 i més petita que 18')
+}
+
+# Sense operador
+'''
+if (suma == 13): {}
+else: {
+    print('La seva suma no és 13')
+}
+'''
+
+# Operador not (no)
+if not (suma == 13): {  # '==' com a operador / '=' és assignació / '!=' no igual
+    print('La seva suma no és 13')
+}
+
+'''
+if (suma == 15): {
+    print('La seva suma és 15')
+}
+else:
+    if (suma != 13): {
+        print('La seva suma no és 13')
+    }
+'''
+
+# En comptes d'escriure else i en una altre línia if
+if (suma == 14): {
+    print('La seva suma és 14')
+}
+elif (suma == 15): {
+    print('La seva suma és 15')
 }
 
 
