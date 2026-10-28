@@ -11,42 +11,52 @@ print('\n\033[4mSumar-los (s)\tRestar-los (r)\tMultiplicar (m)\tPotència (p)')
 print('\nDividir (d)\tMódul/Residu (mr)\tDivisió entera (de)\033[0m\n')
 
 option = input()
-print('\n Has escollit',end='')
-:',n1,'-',n2,'=',n1-n2,'\t',n2,'-',n1,'=',n2-n1,'\n')
-print(' Multiplicació:',n1,'·',n2,'=',n1*n2,'\n')
-print('       Divisió:',n1,'/',n2,'=',n1/n2,'\t',n2,'/',n1,'=',n2/n1,'\n')
-print('  Módul/Residu:',n1,'%',n2,'=',n1%n2,'\t',n2,'%',n1,'=',n2%n1,'\n')
-print('Divisió entera:',n1,'//',n2,'=',n1//n2,'\t',n2,'//',n1,'=',n2//n1,'\n')
-print('      Potència:',n1,'^',n2,'=',n1**n2,'\t',n2,'^',n1,'=',n2**n1,'\n')
+print('Has escollit \033[4m',end='')
+if (option == 's'): {
+    print('sumar\033[0m:',n1,'+',n2,'=',n1+n2,'\n')
+}
+elif (option == 'r'): {
+    print('restar\033[0m:',n1,'-',n2,'=',n1-n2,'\n')
+}
+elif (option == 'm'): {
+    print('multiplicar\033[0m:',n1,'·',n2,'=',n1*n2,'\n')
+}
+elif (option == 'p'): {
+    print('potència\033[0m:',n1,'^',n2,'=',n1**n2,'\n')
+}
+elif (option == 'd'): {
+    print('dividir\033[0m:',n1,'/',n2,'=',n1/n2,'\n')
+}
+elif (option == 'mr'): {
+    print('mòdul/residu\033[0m:',n1,'%',n2,'=',n1%n2,'\n')
+}
+elif (option == 'de'): {
+    print('divisió entera\033[0m:',n1,'//',n2,'=',n1//n2,'\n')
+}
 
-# Increments de variables
-'''
-num = 1
-print(num)
-num = 2       # Reassigna la variable
-print(num)
-num = num+1   # Suma 1 el valor de la variable
-print(num)
-num += 1      # Incrementa en 1 el valor de la variable
-print(num)
-'''
-
-# Intercanvi de variables
-print('La primera variable val:',n1,'\n')
-print('La segona  variable val:',n2,'\n')
-aux = n1    # Variable auxiliar
-n1 = n2
-n2 = aux
-print('Ara la primera variable val:',n1,'\n')
-print('Ara la segona  variable val:',n2,'\n')
-
-# Textos
-t1 = input('Escriu un text\n')
-t2 = input('Escriu un altre text\n')
-
-print('\n\033[4mOPERACIONS AMB CARÀCTERS\033[0m\n')
-print('Concatenar:',t1+t2,'\n')
-print('Multiplicació:',t1*3,'\n')
-
+print("Vols canviar l'ordre de l'operació? (y/n)")
+canvi = input()
+if (canvi =='y'):
+    if (option == 's'): {
+        print('sumar\033[0m:',n1,'+',n2,'=',n1+n2,'\n')
+    }
+    elif (option == 'r'): {
+        print('restar\033[0m:',n1,'-',n2,'=',n1-n2,'\n')
+    }
+    elif (option == 'm'): {
+        print('multiplicar\033[0m:',n1,'·',n2,'=',n1*n2,'\n')
+    }
+    elif (option == 'p'): {
+        print('potència\033[0m:',n1,'^',n2,'=',n1**n2,'\n')
+    }
+    elif (option == 'd'): {
+        print('dividir\033[0m:',n1,'/',n2,'=',n1/n2,'\n')
+    }
+    elif (option == 'mr'): {
+        print('mòdul/residu\033[0m:',n1,'%',n2,'=',n1%n2,'\n')
+    }
+    elif (option == 'de'): {
+        print('divisió entera\033[0m:',n1,'//',n2,'=',n1//n2,'\n')
+    }
 
 print("")
