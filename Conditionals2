@@ -1,62 +1,96 @@
 print("")
 
 
-print('Si escrius un 0 donarà error')
 # Números
 n1 = int(input('Escriu un número\n'))
 n2 = int(input('Escriu un segon número\n'))
 
+# Menú
 print('Què vols fer amb els números?')
 print('\n\033[4mSumar-los (s)\tRestar-los (r)\tMultiplicar (m)\tPotència (p)')
 print('\nDividir (d)\tMódul/Residu (mr)\tDivisió entera (de)\033[0m\n')
-
 option = input()
-print('Has escollit \033[4m',end='')
-if (option == 's'): {
-    print('sumar\033[0m:',n1,'+',n2,'=',n1+n2,'\n')
-}
-elif (option == 'r'): {
-    print('restar\033[0m:',n1,'-',n2,'=',n1-n2,'\n')
-}
-elif (option == 'm'): {
-    print('multiplicar\033[0m:',n1,'·',n2,'=',n1*n2,'\n')
-}
-elif (option == 'p'): {
-    print('potència\033[0m:',n1,'^',n2,'=',n1**n2,'\n')
-}
-elif (option == 'd'): {
-    print('dividir\033[0m:',n1,'/',n2,'=',n1/n2,'\n')
-}
-elif (option == 'mr'): {
-    print('mòdul/residu\033[0m:',n1,'%',n2,'=',n1%n2,'\n')
-}
-elif (option == 'de'): {
-    print('divisió entera\033[0m:',n1,'//',n2,'=',n1//n2,'\n')
+
+# Error a l'introduir l'operació?
+if not (option == 's' or option == 'r' or option == 'm' or option == 'p' or option == 'd' or option == 'mr' or option == 'de'): {
+    print('No has introduït una comanda correcta')
 }
 
-print("Vols canviar l'ordre de l'operació? (y/n)")
-canvi = input()
-if (canvi =='y'):
+else:
+    print('Has escollit \033[4m',end='')
     if (option == 's'): {
-        print('sumar\033[0m:',n1,'+',n2,'=',n1+n2,'\n')
+        print('sumar\033[0m:',n1,'+',n2,'=',n1+n2)
     }
     elif (option == 'r'): {
-        print('restar\033[0m:',n1,'-',n2,'=',n1-n2,'\n')
+        print('restar\033[0m:',n1,'-',n2,'=',n1-n2)
     }
     elif (option == 'm'): {
-        print('multiplicar\033[0m:',n1,'·',n2,'=',n1*n2,'\n')
+        print('multiplicar\033[0m:',n1,'·',n2,'=',n1*n2)
     }
-    elif (option == 'p'): {
-        print('potència\033[0m:',n1,'^',n2,'=',n1**n2,'\n')
-    }
-    elif (option == 'd'): {
-        print('dividir\033[0m:',n1,'/',n2,'=',n1/n2,'\n')
-    }
-    elif (option == 'mr'): {
-        print('mòdul/residu\033[0m:',n1,'%',n2,'=',n1%n2,'\n')
-    }
-    elif (option == 'de'): {
-        print('divisió entera\033[0m:',n1,'//',n2,'=',n1//n2,'\n')
-    }
+    elif (option == 'p'):
+        print('potència\033[0m:',n1,'^',n2,'=',end=' ')
+        if (n1 == 0 and n2 < 0):
+            print('ERROR, no es pot fer')
+        else:
+            print(n1**n2)
+    elif (option == 'd'):
+        print('dividir\033[0m:',n1,'/',n2,'=',end=' ')
+        if (n2 == 0):
+            print('ERROR, no es pot fer')
+        else:
+            print(n1/n2)
+    elif (option == 'mr'):
+        print('mòdul/residu\033[0m:',n1,'%',n2,'=',end=' ')
+        if (n2 < 0):
+            print('ERROR, evita ficar un módul negatiu')
+        elif (n2 == 0):
+            print('ERROR, no es pot fer')
+        else:
+            print(n1%n2)
+    elif (option == 'de'):
+        print('divisió entera\033[0m:',n1,'//',n2,'=',end=' ')
+        if (n2 < 0):
+            print('ERROR, evita ficar un negatiu al dividend')
+        elif (n2 == 0):
+            print('ERROR, no es pot fer')
+        else:
+            print(n1//n2)
+    
+    print("\nVols canviar l'ordre de l'operació? (y/n)")
+    canvi = input()
+    if (canvi =='y'):
+        print('\t',n2,end=" ")
+        if (option == 's'):     print('+',n1,'=',n2+n1)
+        elif (option == 'r'):   print('-',n1,'=',n2-n1)
+        elif (option == 'm'):   print('·',n1,'=',n2*n1)
+        elif (option == 'p'):
+            print('^',n1,'=',end=' ')
+            if (n2 == 0 and n1 < 0):
+                print('ERROR, no es pot fer')
+            else:
+                print(n2**n1)
+        elif (option == 'd'):
+            print('/',n1,'=',end=' ')
+            if (n1 == 0):
+                print('ERROR, no es pot fer')
+            else:
+                print(n2/n1)
+        elif (option == 'mr'):
+            print('%',n1,'=',end=' ')
+            if (n1 < 0):
+                print('ERROR, evita ficar un módul negatiu')
+            elif (n1 == 0):
+                print('ERROR, no es pot fer')
+            else:
+                print(n2%n1)
+        elif (option == 'de'):
+            print('//',n1,'=',end=' ')
+            if (n1 < 0):
+                print('ERROR, evita ficar un negatiu al dividend')
+            elif (n1 == 0):
+                print('ERROR, no es pot fer')
+            else:
+                print(n2//n1)
+
 
 print("")
