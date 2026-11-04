@@ -24,18 +24,41 @@ print("")
 
 # Parts d'una llista
 print(llista[1:3])
+print("")
 
 # Reassignar un valor
 llista[2] = 'gat'
 print(llista)
+print("")
 
 # Eliminar [delete]
 del llista[2]
 print(llista)
+print("")
 
 # Esborrar el contingut deixant la "caixa"
 llista[2] = ""
 print(llista)
+print("\n\n\n\n\n\n")
+
+'''
+PROGRAMA
+Comprova si la lletra del DNI és correcte
+'''
+dni = input('Escriu el teu DNI complet i sense espais\n')
+
+# Separa número
+numero = int(dni[0:8])
+lletra = dni[8]
+
+pos = numero % 23
+codi = ['T','R','W','A','G','M','Y','F','P','D','X','B','N','J','Z','S','Q','V','H','L','C','K','E']
+
+# És la lletra correcta?
+if(lletra == codi[pos]):
+    print('El teu DNI és correcte')
+else:
+    print('Aquest DNI no és correcte. Hauria de ser:',str(numero)+'-'+codi[pos])
 
 
 print("")
