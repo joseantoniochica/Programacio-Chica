@@ -120,7 +120,7 @@ if(not fi):
 
 print('\nLa llista ordenada és:',llista)
 
-# Llistes de prova : 4,2,3,1    1,4,2,3     2,4,3,1
+# Llistes de prova: 4,2,3,1    1,4,2,3     2,4,3,1
 
 
 print("")
