@@ -1,1 +1,126 @@
+print("")
 
+
+compt = 0
+fi = False
+llista = []
+llista.append(int(input('Escriu un número: ')))
+llista.append(int(input('Escriu un altre:  ')))
+llista.append(int(input('Escriu un altre:  ')))
+llista.append(int(input("Escriu l'últim:   ")))
+print('\nLa llista original és:',llista)
+
+if(llista[0] > llista [1]):
+    llista.append(llista[0])
+    del llista[0]
+elif(llista[1] > llista [2]):
+    llista.append(llista[1])
+    del llista[1]
+elif(llista[2] > llista [3]):
+    llista.append(llista[2])
+    del llista[2]
+else:
+    fi = True
+
+if(not fi):
+    compt+=1
+    print('\nLa llista['+str(compt)+'] és:',llista)
+
+    if(llista[0] > llista [1]):
+        llista.append(llista[0])
+        del llista[0]
+    elif(llista[1] > llista [2]):
+        llista.append(llista[1])
+        del llista[1]
+    elif(llista[2] > llista [3]):
+        llista.append(llista[2])
+        del llista[2]
+    else:
+        fi = True
+
+if(not fi):
+    compt+=1
+    print('La llista['+str(compt)+'] és:',llista)
+
+    if(llista[0] > llista [1]):
+        llista.append(llista[0])
+        del llista[0]
+    elif(llista[1] > llista [2]):
+        llista.append(llista[1])
+        del llista[1]
+    elif(llista[2] > llista [3]):
+        llista.append(llista[2])
+        del llista[2]
+    else:
+        fi = True
+
+if(not fi):
+    compt+=1
+    print('La llista['+str(compt)+'] és:',llista)
+
+    if(llista[0] > llista [1]):
+        llista.append(llista[0])
+        del llista[0]
+    elif(llista[1] > llista [2]):
+        llista.append(llista[1])
+        del llista[1]
+    elif(llista[2] > llista [3]):
+        llista.append(llista[2])
+        del llista[2]
+    else:
+        fi = True
+
+if(not fi):
+    compt+=1
+    print('La llista['+str(compt)+'] és:',llista)
+
+    if(llista[0] > llista [1]):
+        llista.append(llista[0])
+        del llista[0]
+    elif(llista[1] > llista [2]):
+        llista.append(llista[1])
+        del llista[1]
+    elif(llista[2] > llista [3]):
+        llista.append(llista[2])
+        del llista[2]
+    else:
+        fi = True
+
+if(not fi):
+    compt+=1
+    print('La llista['+str(compt)+'] és:',llista)
+
+    if(llista[0] > llista [1]):
+        llista.append(llista[0])
+        del llista[0]
+    elif(llista[1] > llista [2]):
+        llista.append(llista[1])
+        del llista[1]
+    elif(llista[2] > llista [3]):
+        llista.append(llista[2])
+        del llista[2]
+    else:
+        fi = True
+
+if(not fi):
+    compt+=1
+    print('La llista['+str(compt)+'] és:',llista)
+
+    if(llista[0] > llista [1]):
+        llista.append(llista[0])
+        del llista[0]
+    elif(llista[1] > llista [2]):
+        llista.append(llista[1])
+        del llista[1]
+    elif(llista[2] > llista [3]):
+        llista.append(llista[2])
+        del llista[2]
+    else:
+        fi = True
+
+print('\nLa llista ordenada és:',llista)
+
+# Llistes de prova : 4,2,3,1    1,4,2,3     2,4,3,1
+
+
+print("")
