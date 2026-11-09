@@ -40,7 +40,7 @@ print("")
 # Esborrar el contingut deixant la "caixa"
 llista[2] = ""
 print(llista)
-print("\n\n\n\n\n\n")
+print("\n")
 
 '''
 PROGRAMA
@@ -61,6 +61,18 @@ if(lletra == codi[pos]):
     print('El teu DNI és correcte')
 else:
     print('Aquest DNI no és correcte. Hauria de ser:',str(numero)+'-'+codi[pos])
+
+print("\n")
+
+# Continuació amb la teoria. Funció APPEND
+print('La llista és:',llista)
+llista.append('gat')
+print(llista)
+print("")
+
+# Funció INSERT
+llista.insert(1,'gos')
+print(llista)
 
 
 print("")
