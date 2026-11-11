@@ -1,1 +1,39 @@
+print("")
 
+'''
+while(True):
+    nom = input('Qui ets?\n')
+    if(nom != 'Jordi'):
+        continue
+    print('')
+    print('Hola Jordi, quina és la contrasenya?')
+    password = input()
+    if(password == 'Buff'):
+        break
+print('Benvingut')
+'''
+lim = int(input('Quin és el nombre fins on vols calcular els primers?\n'))
+print("")
+
+if(lim > 2):
+    prim = [2]
+    for i in range(3,lim+1):
+        for j in prim:
+            if(i%j == 0):
+                break
+            elif(i//j < j):
+                prim.append(i)
+                break
+    print('Hi ha',len(prim),'nombres primers fins el',str(lim)+'.')
+    imp = input('Vols que els imprimeixi per pantalla? (y/n)\t')
+    if(imp == 'y'):
+        print(prim)
+elif(lim == 2):
+    print('El 2 és el primer nombre primer')
+elif(lim == 1):
+    print("L'1 no es considera un nombre primer")
+else:
+    print('Dona un número natural')
+
+
+print("")

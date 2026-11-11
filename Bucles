@@ -7,21 +7,21 @@ llista = []
 llista.append(input('Introdueix un nom: '))
 llista.append(input('Introdueix un nom: '))
 llista.append(input('Introdueix un nom: '))
-
+'''
 # Amb bucle
 for i in range(3):
     llista.append(input('Introdueix un nom: '))
-
+'''
 print('')
 print(llista)
 print('')
-
+'''
 # Bucle en un interval concret
 for i in range(17,101):
     if(i%2 == 0):
         print(i,end=' ')
 print("\n")
-
+''''''
 # Bucle en una llista
 compt = 0
 for i in llista[0]:
@@ -29,7 +29,7 @@ for i in llista[0]:
         compt+=1
 print('El primer nom de la llista és',llista[0],'i té',compt,'caràcters a')
 print("")
-
+''''''
 # Bucle de bucle amb elements
 notes = [[6,6,7,10,9],[10,7,6,7,7],[5,5,10,7,10]]
 compt = 0
@@ -38,7 +38,7 @@ for i in notes:
         if(j == 10):
             compt+=1
 print('Hi ha',compt,'deus (10) a la classe.')
-
+''''''
 # Bucle de bucle amb índexs
 if(compt > 0):
     print('Estan asseguts:')
@@ -47,7 +47,7 @@ if(compt > 0):
             if(notes[i][j] == 10):
                 print('En la fila',i,'columna',j)
 print("")
-
+''''''
 # Bucle condicional
 secret = 7
 num = int(input('Adivina el número del 1 al 10\n'))
@@ -60,7 +60,7 @@ if(compt > 3):
 else:
     print("Ja l'has trobat")
 print("")
-
+''''''
 # Ús del CONTINUE i BREAK
 for i in range(1,6):
     if(i == 3):
@@ -69,7 +69,7 @@ for i in range(1,6):
         break           # Acaba la iteració i talla el for
     print(i,end=' ')
 print('')
-
+''''''
 # EXEMPLE profe d'ús del CONTINUE
 for i in range(1,6):
     if(i == 3):
@@ -79,7 +79,7 @@ for i in range(1,6):
             print(j,end=' ')
     print(i,end=' ')
 print('')
-
+''''''
 # EXEMPLE profe d'ús del BREAK
 for i in range(1,6):
     if(i == 3):
@@ -89,6 +89,6 @@ for i in range(1,6):
             print(j,end=' ')
     print(i,end=' ')
 print('')
-
+'''
 
 print("")
