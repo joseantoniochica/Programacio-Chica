@@ -3,51 +3,64 @@ import random
 print("")
 
 
-print('Anem a jugar al \033[1;32mMasterMind\033[0m:')
-print('\t','\u25cf \033[1m10 intents\033[0m')
-print('\t','\u25cf Introdueix números del 0 al 9 i pulsar ENTER')
-print('\t','\u25cf Troba la combinació correcte')
-print('')
-
 # VARIABLES
+
 # Genera una llista de números entre 0 y 9 (inclusos)
-llista = [random.randint(0, 9),random.randint(0, 9),random.randint(0, 9),random.randint(0, 9)]
+llista = [str(random.randint(0, 9)),str(random.randint(0, 9)),str(random.randint(0, 9)),str(random.randint(0, 9))]
 
 # Compta quantes vegades apareix un número
 repe_llista = [0,0,0,0,0,0,0,0,0,0]
 for i in range(4):
-    repe_llista [llista[i]] += 1
-
+    repe_llista [int(llista[i])] += 1
 trobat = False
 resposta = ['','','','']
 intent = 0   # Número d'intents
 
+print('Anem a jugar al \033[1;32mMasterMind\033[0m:','\t\t\t\t',f'\033[8m{llista}\033[0m')
+print('\t','\u25cf \033[1m10 intents\033[0m')
+print('\t','\u25cf Introdueix números del 0 al 9 i pulsar ENTER')
+print('\t','\u25cf Troba la combinació correcte')
+print('')
 
 # JOC
 while(not trobat and intent != -1):
 
     # Lectura
     intent += 1
-    print(f'\033[1mTaulell  {intent:<2}\033[0m: ','_','_','_','_')
+    print(f'\033[1mTaulell  {intent:<2}\033[0m:')
     for i in range(4):
-        print(f"\033[F\033[{13+i*2}C", end="") # Per sobreescriure el taulell. Puja i es desplaça
-        resposta[i] = input(' ')
-    
+        while True:
+            # Esborra el que hi hagués i redibuixa els guions buits des d'aquesta posició
+            guions = " _" * (4 - i)
+            print(f"\033[F\033[{13+i*2}C{guions}\033[K")
+            
+            # Es col·loca a la posició exacta per demanar el número
+            print(f"\033[F\033[{13+i*2}C", end="")
+            resposta[i] = input(' ')
+            
+            if(len(resposta[i]) == 1):
+                break
+
     # Comprovació de respostes
     repe_resposta = [0,0,0,0,0,0,0,0,0,0] # Llista de control per saber si es repeteix un número
     correcte = 0    # Mateixa posició
     regular = 0     # No a la posició
+
+    # Busca els que coincideixen
     for i in range(4):
-        for j in range(4):
-            if(i == j):
-                if(resposta[i] == llista[i]):
-                    repe_resposta[int(resposta[i])] += 1
-                    regular += 1
-                    correcte += 1
-            elif(resposta[i] == llista[j]):
-                if(repe_resposta[int(resposta[i])]<repe_llista[int(resposta[i])]):
-                    repe_resposta[int(resposta[i])] += 1
-                    regular += 1
+        if(resposta[i] == llista[i]):
+            correcte += 1
+            regular += 1
+            repe_resposta[int(resposta[i])] += 1 # Vegades que ha sortit a la resposta
+
+    # Busca si hi ha, però fora de la seva posició
+    for i in range(4):
+        if(resposta[i] != llista[i]):
+
+            # Ha sortit el mateix nombre de vegades que té a la solució?
+            if(repe_resposta[int(resposta[i])] < repe_llista[int(resposta[i])]):
+                repe_resposta[int(resposta[i])] += 1
+                regular += 1
 
     # Impressió per pantalla
     print(f"\033[F\033[21C", end="\t")
