@@ -78,5 +78,5 @@ if(intent == -1):
 else:
     print('Has trobat la resposta!\t\t\033[1;31mVICTORY\033[0m')
 
-
+input()
 print("")
